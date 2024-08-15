@@ -138,18 +138,142 @@ legend{
     background-color: rgba(149, 129, 129,0.5);
 }
 
+.servicAndTeamPageContainer{
+    display: flex;
+    flex-direction: column;
+    /* height: 200vh; */
+}
+
 .servicesPage{
     background-color: rgb(211, 198, 198);
     /* background-color: rgba(149, 129, 129,0.5); */
+    /* height: 100vh; */
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+.serviceCards{
+    min-height: 100vh;
+    width: 100vw;
+    display: grid;
+    gap: 1.7vw;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit,minmax(100px,500px));
+    grid-template-rows: repeat(auto-fit,minmax(80px,300px));
+}
+
+.serviceCard{
+    width: 100%;
+    height: 100%;
+    padding: 2vw;
+    gap: 2vw;
+    
+}
+
+.serviceCard h5{
+    font-size: 3vw;
+    line-height: -3px;
+}
+
+.serviceCard img{
+    width: 80%;
+    height: 70%;
+    object-fit: cover;
+
+    object-position: center;
 
 }
 
+
+
 .teamPage{
+    width: 100vw;
+    min-height: 100vh;
     background-color: rgb(211, 198, 198);
-    height: full;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+.teamHeadline{
+    font-size: 4vw;
+    font-weight: 600;
+}
+
+.teamMemberContainer{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(100px,400px));
+    grid-template-rows: repeat(2,minmax(250px,350px));
+    gap: 2vw;
+    margin-bottom: 2vw;
+}
+
+.teamMember{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+}
+
+.teamMember img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.teamMemberInfo{
+    width: 70%;
+    height: 40%;
+    background-color: rgb(211, 198, 198);
+    position: absolute;
+    bottom: -15%;
+    left: 12%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1vw;
+}
+
+.socailHandlesOfTeamMember{
+    width: 50%;
+    height: 30px;
+    /* background-color: black; */
+    margin-left: 25%;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+}
+
+.socialHanndleOfTeamMemberImage{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.socialHanndleOfTeamMemberImage{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    
 }
 
 @media only screen and (max-width: 480px) {
+
     nav{
         height: 8vh;
     }
@@ -164,5 +288,11 @@ legend{
         height: 2rem;
 
         overflow: auto;
+    }
+    .teamMemberContainer{
+        display: grid;
+        grid-template-columns: repeat(1,minmax(100px,400px));
+        grid-template-rows: repeat(3,minmax(150px,300px));
+        gap: 2vw;
     }
 }
