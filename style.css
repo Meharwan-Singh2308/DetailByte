@@ -9,13 +9,14 @@ html, body {
     width: 100%;
     height: 100%;
     background-color: rgb(211, 198, 198);
-
+    scroll-behavior: smooth;
 }
 
 main{
     width: 100vw;
     min-height: 100vh;
     overflow: hidden;
+    overflow-x: hidden;
     scrollbar-width: 0px;
     background-color: rgb(211, 198, 198);
 
@@ -29,7 +30,20 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    left: 0;
+    top:0;
+    transition: 0.6s;
+    z-index: 999;
 }
+ 
+
+.nav-left{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    list-style-type: none;
+}   
 
 .nav-logo{
     width: 3rem;
@@ -40,6 +54,8 @@ nav{
     align-items: center;
     gap: 10px;
     font-weight: 400;
+    scale: 1;
+    /* overflow: hidden; */
 }
 
 .nav-right{
@@ -104,21 +120,31 @@ nav{
 
 .humburgerMenu{
     
-    width: fit-content;
+    width: 90vw;
     height: 100vh;
     position: absolute;
     top: 0;
     right: -100%;
-    background-color: rgba(000, 000, 000, .5);
+    background-color: rgba(255,255,255, 1);
     border-bottom-left-radius: 25px;
-    padding: 3vw;
-    padding-right: 20vw;
-    padding-top: 20vw;
+    padding: 5vw;
+    padding-left: 20vw;
+    padding-top: 7vw;
     transition: all 0.3s linear;
 }
 
 .humburgerMenuListItems{
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+
+}
+
+.humburgerMenuListItems a{
+    font-size: 8vw;
+    font-weight: bold;
+    display: inline-block;
 }
 
 legend{
@@ -141,6 +167,10 @@ legend{
 .servicAndTeamPageContainer{
     display: flex;
     flex-direction: column;
+    min-height: 300vh;
+    width: 100vw;
+    align-items: center;
+    gap: 2vw;
     /* height: 200vh; */
 }
 
@@ -154,17 +184,19 @@ legend{
     flex-direction: column;
     justify-content: space-between;
     gap: 2vw;
+    padding: 1vw 3vw;
 }
 
 .serviceCards{
     min-height: 100vh;
+    max-height: 130vh;
     width: 100vw;
     display: grid;
     gap: 1.7vw;
-    align-items: center;
+    align-content: center;
     justify-content: center;
     grid-template-columns: repeat(auto-fit,minmax(100px,500px));
-    grid-template-rows: repeat(auto-fit,minmax(80px,300px));
+    grid-template-rows: repeat(auto-fit,minmax(80px,350px));
 }
 
 .serviceCard{
@@ -172,11 +204,12 @@ legend{
     height: 100%;
     padding: 2vw;
     gap: 2vw;
-    
+    display: flex;
+    flex-direction: column;
 }
 
 .serviceCard h5{
-    font-size: 3vw;
+    font-size: 2vw;
     line-height: -3px;
 }
 
@@ -193,33 +226,34 @@ legend{
 
 .teamPage{
     width: 100vw;
-    min-height: 100vh;
+    min-height: 90vh;
     background-color: rgb(211, 198, 198);
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    gap: 2vw;
+    gap: 3vw;
+    padding: 2vw;
 }
 
 .teamHeadline{
-    font-size: 4vw;
+    font-size: 3rem;
     font-weight: 600;
 }
 
 .teamMemberContainer{
     display: grid;
     grid-template-columns: repeat(2,minmax(100px,400px));
-    grid-template-rows: repeat(2,minmax(250px,350px));
+    grid-template-rows: repeat(auto-fit,minmax(150px,320px));
     gap: 2vw;
-    margin-bottom: 2vw;
+    /* margin-bottom: 2vw; */
 }
 
 .teamMember{
     width: 100%;
     height: 100%;
     background-color: black;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
     border-radius: 15px;
 }
@@ -229,6 +263,8 @@ legend{
     height: 100%;
     object-fit: cover;
     object-position: center;
+    border-radius: 15px;
+
 }
 
 
@@ -269,10 +305,43 @@ legend{
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    
 }
 
-@media only screen and (max-width: 480px) {
+
+.aboutPage{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(211, 198, 198);
+    display: flex;
+    padding: 2vw;
+    align-items: center;
+}
+
+.aboutPageTextInfo{
+    width: 70vw;
+    padding: 0 2vw;
+
+}
+
+.aboutPageTextInfo p{
+    text-align: left;
+}
+
+.aboutPageTextInfo h1{
+    font-size: 4rem;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+.aboutPageLogoImage{
+    width: 25vw;
+    height: 35vw;
+    margin-top: 25%;
+}
+
+
+@media only screen and (max-width: 650px) {
 
     nav{
         height: 8vh;
@@ -296,3 +365,74 @@ legend{
         gap: 2vw;
     }
 }
+
+@media (max-width:600px) {
+    
+.servicesPage{
+    background-color: rgb(211, 198, 198);
+    /* background-color: rgba(149, 129, 129,0.5); */
+    /* height: 100vh; */
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+   
+    padding: 1vw 3vw;
+}
+
+.serviceCards{
+    margin-top: -17vh;
+    min-height: 90vh;
+    /* max-height: 130vh; */
+    width: 100vw;
+    display: grid;
+    gap: 1.7vw;
+    padding-left: 16vw;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit,minmax(100px,400px));
+    grid-template-rows: repeat(auto-fit,minmax(80px,200px));
+    margin-bottom: 10vw;
+}
+
+.serviceCard{
+    width: 80%;
+    height: 100%;
+    padding: 2vw;
+    gap: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.serviceCard h5{
+    font-size: 3vw;
+    line-height: -3px;
+}
+
+.serviceCard img{
+    width: 80%;
+    height: 70%;
+    object-fit: cover;
+
+    object-position: center;
+
+}
+}
+
+@media (max-width:520px) {
+    .teamHeadline{
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width:900px) {
+    .teamMemberContainer{
+        display: grid;
+        grid-template-columns: repeat(3,minmax(100px,400px));
+        grid-template-rows: repeat(auto-fit,minmax(150px,320px));
+        gap: 2vw;
+    }
+    
+}
+

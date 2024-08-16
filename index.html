@@ -25,13 +25,13 @@
   <body>
     <main>
       <nav>
-        <a href="/" class="nav-logo nav-left">
-          <img class="nav-logo nav-left" src="/Untitled design.png" alt="" />
+        <a href="/" class="nav-left">
+          <img class="nav-logo" src="/Untitled design.png" alt="" />
           <h3>DetailByte</h3>
         </a>
         <ul class="nav-right">
-          <a class="cursor-pointer">Our Services</a>
-          <a class="cursor-pointer">Our Team</a>
+          <a href="#servicePage" class="cursor-pointer">Our Services</a>
+          <a href="#teamPage" class="cursor-pointer">Our Team</a>
           <a class="cursor-pointer">About Us</a>
           <a class="cursor-pointer">Contact Us</a>
           <div class="menuIcon">
@@ -42,10 +42,10 @@
         </ul>
         <div class="humburgerMenu">
           <div class="humburgerMenuListItems">
-            <h2>Our Services</h2>
-            <h2>Our Team</h2>
-            <h2>About Us</h2>
-            <h2>Contact Us</h2>
+            <a href="./services.html">Our Services</a>
+            <a href="./team.html">Our Team</a>
+            <a>About Us</a>
+            <a>Contact Us</a>
           </div>
         </div>
       </nav>
@@ -60,7 +60,7 @@
       </legend>
     </main>
     <span class="servicAndTeamPageContainer">
-      <div class="servicesPage">
+      <div id="servicePage" class="servicesPage">
         <h1 class="text-5xl text-center font-semibold">Our Services</h1>
 
         <div class="serviceCards">
@@ -69,7 +69,7 @@
           >
             <img
               class="object-cover"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOBUGfc1POJ-TXvNQsz2wA5K4STjW5HTP3iQ&s"
+              src="https://media.istockphoto.com/id/1497864355/vector/hands-selling-data.jpg?s=612x612&w=0&k=20&c=wGKlGewh5Y_9dRs43GldHhlPbsde-OL9_ctQbcGqZl8="
               alt=""
             />
             <h5 class="font-semibold text-lg">
@@ -90,7 +90,7 @@
         </div>
       </div>
 
-      <div class="teamPage">
+      <div id="teamPage" class="teamPage">
         <h1 class="teamHeadline">Meet Our Team</h1>
         <div class="teamMemberContainer">
           <div class="teamMember">
@@ -156,9 +156,23 @@
               </div>
             </div>
           </div>
+          
+        </div>
+      </div>
+
+      <div class="aboutPage">
+        <div class="aboutPageTextInfo">
+          <h1>About Our Company</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio maxime soluta, enim maiores cum sint deserunt quaerat beatae ad qui corrupti odio mollitia aspernatur nisi molestias? Architecto accusantium vel non ullam, quos facilis totam accusamus aliquam aut in aperiam nisi voluptates, asperiores laudantium porro iste minima dicta. Laboriosam cumque ea numquam possimus repellat molestiae corporis sint voluptatem! Autem veritatis beatae ut omnis dignissimos maiores labore aliquid saepe, culpa at doloribus est aut, quae necessitatibus hic quidem iusto rerum ea assumenda eaque! Aliquid fuga culpa mollitia ullam odit. In ratione laudantium, quam labore doloribus cupiditate officiis reprehenderit omnis delectus natus cum sequifugit! Ipsum illo incidunt quos ut repudiandae, esse cupiditate, nulla amet asperiores corrupti neque, voluptatibus quod perferendis voluptate commodi deleniti molestiae iure reiciendis natus numquam provident et velit. Velit saepe facere, eius impedit amet nostrum.</p>
+  
+        </div>
+  
+        <div class="aboutPageLogoImage">
+          <img src="./Untitled design.png" alt="">
         </div>
       </div>
     </span>
+    
 
     <script src="/script.js"></script>
   </body>

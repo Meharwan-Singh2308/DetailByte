@@ -11,4 +11,3 @@ menuIcon.addEventListener("click", function(){
 
     }
 })
-
